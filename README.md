@@ -1,23 +1,23 @@
 # Biomechanics-of-gait
-Topic : Biomechanics of gait with image processing for classification of normal and abnormal gait.
-Knowledge : Image processing, Math equations, Computer vision, Machine learning, Disease or symptom with abnormal gait.
-Tools : Python, OpenCV, Mediapipe, Numpy.
+Topic : Biomechanics of gait with image processing for classification of normal and abnormal gait.</br>
+Knowledge : Image processing, Math equations, Computer vision, Machine learning, Disease or symptom with abnormal gait.</br>
+Tools : Python, OpenCV, Mediapipe, Numpy.</br>
 
-<h2>Scope</h2>
+<h2>Scope</h2></br>
 <h3>First thought</h3>
-- Check some disease with abnormal gait
-- Check some symptoms from abnormal gait
-- Check risk for some symptoms from abnormal gait
+- Check some disease with abnormal gait</br>
+- Check some symptoms from abnormal gait</br>
+- Check risk for some symptoms from abnormal gait</br>
 <h3>Done</h3>
-- Risk for neck pain.
-- Risk for limping gait.
-- Risk for Hip hike.
-- Risk for Parkinson.
+- Risk for neck pain.</br>
+- Risk for limping gait.</br>
+- Risk for Hip hike.</br>
+- Risk for Parkinson.</br>
 <h3>Problem</h3>
-- Must be viewed from the side only.
-- Did not use AI for training or prediction.
-- Quite a bit of relevant information or research.
-- Datasets related to various diseases are quite rare.
+- Must be viewed from the side only.</br>
+- Did not use AI for training or prediction.</br>
+- Quite a bit of relevant information or research.</br>
+- Datasets related to various diseases are quite rare.</br>
 <h3>Continue in the future</h3>
-- Use AI for train model or predict disease.
-- Applied with accessories for greater accuracy.
+- Use AI for train model or predict disease.</br>
+- Applied with accessories for greater accuracy.</br>
