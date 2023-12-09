@@ -5,18 +5,22 @@ Tools : Python, OpenCV, Mediapipe, Numpy.</br></br>
 <img src = "Limping gait.gif" />
 
 ## Installation
-<a href = "https://www.python.org/downloads/">Install python from version 3.9 onwards.</a>
+<a href = "https://www.python.org/downloads/">Install python</a> <a>from version 3.9 onwards.</a>
+<a> upgrade pip </a>
+```
+  python -m pip install --upgrade pip
+```
 </br>
 install tools:
-```bash
-  python -m pip install --upgrade pip
+```
   python -m pip install opencv-python mediapipe numpy
 ```
 </br>
 install my project:
-```bash
+```
   git clone https://github.com/watcharapol28/Biomechanics-of-gait.git
 ```
+</br>
 
 <h2>Scope</h2>
 <h3>First thought</h3>
