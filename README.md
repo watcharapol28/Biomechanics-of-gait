@@ -2,7 +2,7 @@
 Topic : Biomechanics of gait with image processing for classification of normal and abnormal gait.</br>
 Knowledge : Image processing, Computer vision, Machine learning, Disease or symptom with abnormal gait.</br>
 Tools : Python, OpenCV, Mediapipe, Numpy.</br></br>
-<img src = "Limping gait.gif" />
+<img src = "Limping gait.gif" class="center"/>
 
 <h2>Scope</h2>
 <h3>First thought</h3>
@@ -22,3 +22,10 @@ Tools : Python, OpenCV, Mediapipe, Numpy.</br></br>
 <h3>Continue in the future</h3>
 - Use AI for train model or predict disease.</br>
 - Applied with accessories for greater accuracy.</br>
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
