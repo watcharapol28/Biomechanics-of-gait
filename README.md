@@ -7,19 +7,19 @@ Tools : Python, OpenCV, Mediapipe, Numpy.</br></br>
 ## Installation
 <a href = "https://www.python.org/downloads/">Install python</a> <a>from version 3.9 onwards.</a>
 </br>
-<a> upgrade pip </a>
-```
+
+```<a> Upgrade pip </a>
   python -m pip install --upgrade pip
 ```
 </br>
 install tools:
 </br>
-```
+```<a>Install tools</a>
   python -m pip install opencv-python mediapipe numpy
 ```
 </br>
 install my project:</br>
-```
+```<a>Clone project</a>
   git clone https://github.com/watcharapol28/Biomechanics-of-gait.git
 ```
 </br>
