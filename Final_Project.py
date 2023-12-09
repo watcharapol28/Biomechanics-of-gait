@@ -8,7 +8,7 @@ mp_pose = mp.solutions.pose
 mp_draw = mp.solutions.drawing_utils
 
 pose = mp_pose.Pose()
-cap = cv2.VideoCapture("gait_abnormal_01.mp4")
+cap = cv2.VideoCapture("gait_abnormal_07.mp4")
 # cap = cv2.VideoCapture("gait_normal_01.mp4")
 
 # Set the video be low frame rate
@@ -175,7 +175,7 @@ while True:
         if 200 > left_angle > 160 :
             no_leftleg_frame += 1
         # Hip hike 99% of one leg always swing phase
-        if no_rightleg_frame / no_total_frame > 0.99 or no_leftleg_frame / no_total_frame > 0.99:
+        if no_rightleg_frame / no_total_frame > 0.84 or no_leftleg_frame / no_total_frame > 0.84:
             cv2.putText(img, "Gait abnormal - risk : Hip hike", (50, 450),
                         cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
         
@@ -284,30 +284,11 @@ while True:
                 if left_toe_index_x < left_hand_index_x and right_heel_index_x > left_hand_index_x:
                     no_swing_left +=1
         
-        if (no_swing_right / no_total_frame > 0.95 and (lead_foot_right / no_total_frame > 0.8 or lead_foot_left / no_total_frame > 0.8)) or (no_swing_left / no_total_frame > 0.95 and (lead_foot_right / no_total_frame > 0.8 or lead_foot_left / no_total_frame > 0.8)):
-            cv2.putText(img, "Gait abnormal - risk : Parkinson", (50, 475),
+        if (no_swing_right / no_total_frame > 0.95 ) or (no_swing_left / no_total_frame > 0.95 ):
+            cv2.putText(img, "Gait abnormal - risk : No arm swing", (50, 475),
                         cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
 
 
-
-        # if len(right_toe_y) > 1:
-        #     # start swing phase of right side
-        #     if right_toe_y[no_total_frame-2] - right_toe_y[no_total_frame-1] > 10:
-        #         initial_right_swing_frame.append(no_total_frame)
-        #         no_total_cycle += 1
-        #         phase_of_right = "swing phase"
-
-        #     # start swing phase of left side
-        #     elif left_toe_y[no_total_frame-2] - left_toe_y[no_total_frame-1] > 10:
-        #         initial_left_swing_frame.append(no_total_frame)
-        #         phase_of_right = "stance phase"
-
-        #         # กะเผลก
-        #         # if right_foot_x[no_total_frame-2] > left_foot_x[no_total_frame-2] :
-        #         #     cv2.putText(img, "stumblingly", (50, 500),
-        #         #         cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
-        #     # else:
-        #     #     phase_of_right = "swing phase" if (phase_of_right != 'swing phase') else "stance phase"
         
         cv2.putText(img, "phase of right side : " + phase_of_right, (50, 75),
                         cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 2)
