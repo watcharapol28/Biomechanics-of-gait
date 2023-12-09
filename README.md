@@ -1,7 +1,11 @@
 # Biomechanics-of-gait
 Topic : Biomechanics of gait with image processing for classification of normal and abnormal gait.</br>
-Knowledge : Image processing, Computer vision, Machine learning, Disease or symptom with abnormal gait.</br>
+Knowledge : Image processing, Computer vision, Machine learning, Disease or symptom about abnormal gait.</br>
 Tools : Python, OpenCV, Mediapipe, Numpy.</br></br>
+
+## About project
+
+
 <img src = "Limping gait.gif" />
 
 ## Installation
