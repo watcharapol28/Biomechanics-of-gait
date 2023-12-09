@@ -7,7 +7,7 @@ Tools : Python, OpenCV, Mediapipe, Numpy.</br></br>
 ## Installation
 To use the Biomechanics of gait, follow these step :</br></br>
 <a href = "https://www.python.org/downloads/">Install python</a> <a>from version 3.9 onwards.</a>
-</br>
+</br></br>
 install libraries :
 ```
   python -m pip install opencv-python mediapipe numpy
@@ -22,7 +22,7 @@ install my project :</br>
 ## Running
 To run the Biomechanics of gait, follow these step :</br></br>
 upload files gait videos that want to check in the folder Biomechanics-of-gait or in same the folder as BiomechanicsOfGait.py.
-</br>
+</br></br>
 open folder :
 ```
   cd Biomechanics-of-gait
