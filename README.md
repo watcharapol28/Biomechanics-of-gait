@@ -5,19 +5,17 @@ Tools : Python, OpenCV, Mediapipe, Numpy.</br></br>
 <img src = "Limping gait.gif" />
 
 ## Installation
-To use the Biomechanics of gait, follow these step:
+To use the Biomechanics of gait, follow these step:</br>
 <a href = "https://www.python.org/downloads/">Install python</a> <a>from version 3.9 onwards.</a>
 </br>
-install library:
-</br>
-
+install libraries :
 ```
   python -m pip install opencv-python mediapipe numpy
 ```
 </br>
 
-install my project:</br>
-``` <a>Clone project</a>
+install my project :</br>
+```
   git clone https://github.com/watcharapol28/Biomechanics-of-gait.git
 ```
 </br>
@@ -26,19 +24,19 @@ install my project:</br>
 To run the Biomechanics of gait.</br>
 upload files gait videos that want to check in the folder Biomechanics-of-gait or in same the folder as BiomechanicsOfGait.py.
 </br>
-open folder
+open folder :
 ```
   cd Biomechanics-of-gait
 ```
 </br>
 
-change code in BiomechanicOfGait.py line 11 to your videos you need to check ([File name].[File type]):
+change code in BiomechanicOfGait.py line 11 to your videos you need to check [File name].[File type] :
 ```
   cap = cv2.VideoCapture("[File name].[File type]")
 ```
 </br>
 
-run
+run :
 ```
   python BiomechanicsOfGait.py
 ```
