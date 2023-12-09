@@ -53,7 +53,7 @@ run :
 - Risk for neck pain.</br>
 - Risk for limping gait.</br>
 - Risk for Hip hike.</br>
-- Risk for Parkinson.</br>
+- No arm swing.</br>
 <h3>Problem</h3>
 - Must be viewed from the side only.</br>
 - Did not use AI for training or prediction.</br>
