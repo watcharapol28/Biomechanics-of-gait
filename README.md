@@ -22,7 +22,7 @@ install my project:</br>
 ```
 </br>
 
-##Running
+## Running
 To run the Biomechanics of gait.</br>
 upload files gait videos that want to check in the folder Biomechanics-of-gait or in same the folder as BiomechanicsOfGait.py.
 </br>
