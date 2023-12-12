@@ -39,11 +39,11 @@ change code in BiomechanicOfGait.py line 11 to your videos you need to check [Fi
 
 run :
 ```
-  python BiomechanicsOfGait.py
+  python3 BiomechanicsOfGait.py
 ```
 
 output :</br>
-<a>============================== Conclude ==============================</br>
+<a>================================ Conclude ===============================</br>
  Gait abnormal - risk : [none / neck pain / limping / hip hike / no arm swing]</br>
 ======================================================================</br></a>
 
