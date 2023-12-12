@@ -18,7 +18,7 @@ To use the Biomechanics of gait, follow these step :</br></br>
 </br></br>
 install libraries :
 ```
-  python -m pip install opencv-python mediapipe numpy
+  python3 -m pip install opencv-python mediapipe numpy
 ```
 
 install my project :</br>
