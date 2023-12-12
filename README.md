@@ -10,6 +10,7 @@ This project aims to investigate the possibility of abnormal gait in order to id
 (-) Using Numpy for calculate math equations to determine risk of gait.</br></br>
 
 <img src = "Limping gait.gif" />
+</br></br>
 
 ## Installation
 To use the Biomechanics of gait, follow these step :</br></br>
