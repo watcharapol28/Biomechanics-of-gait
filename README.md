@@ -4,7 +4,10 @@ Knowledge : Image processing, Computer vision, Machine learning, Disease or symp
 Tools : Python, OpenCV, Mediapipe, Numpy.</br></br>
 
 ## About project
-
+This project aims to investigate the possibility of abnormal gait in order to identify any anomalies in the body and also intends to study image processing.</br>
+(-) Using Mediapipe for detect landmarks of human bodies in an image or video.</br>
+(-) Using OpenCV to read data from image or video.</br>
+(-) Using Numpy for calculate math equations to determine risk of gait.</br></br>
 
 <img src = "Limping gait.gif" />
 
