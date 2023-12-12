@@ -8,7 +8,7 @@ mp_pose = mp.solutions.pose
 mp_draw = mp.solutions.drawing_utils
 
 pose = mp_pose.Pose()
-cap = cv2.VideoCapture("gait_abnormal_06.mp4")
+cap = cv2.VideoCapture("gait_abnormal_02.mp4")
 # cap = cv2.VideoCapture("gait_normal_01.mp4")
 
 # Set the video be low frame rate
@@ -252,7 +252,7 @@ while True:
             if left_ear_angle - 180 > 30 or left_ear_angle - 180 < -30 :
                 no_neck_frame += 1
 
-            if no_neck_frame / no_total_frame > 0.7 :
+            if no_neck_frame / no_total_frame > 0.6 :
                 cv2.putText(img, "Gait abnormal - risk : Neck pain", (50, 400),
                             cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
             
@@ -370,24 +370,25 @@ while True:
             break
     except:
         no_gait = 0
-        print("="*30," Conclude ", "="*30, "\n Gait abnormal - risk :\n", sep='', end='')
+        print("="*30," Conclude ", "="*30, "\n Gait abnormal - risk : ", sep='', end='')
         if no_limping_right / no_total_frame > 0.80 or no_limping_left / no_total_frame > 0.80:
             no_gait += 1
-            print("\t- Limping")
-        if no_neck_frame / no_total_frame > 0.7 :
+            print("\n\t- Limping", end='')
+        if no_neck_frame / no_total_frame > 0.60 :
             no_gait += 1
-            print("\t- Neck pain")
+            print("\n\t- Neck pain", end='')
         if no_rightleg_frame / no_total_frame > 0.99 or no_leftleg_frame / no_total_frame > 0.99:
             no_gait += 1
-            print("\t- Hip hike")
+            print("\n\t- Hip hike", end='')
         if no_swing_right / no_total_frame > 0.90:
             no_gait += 1
-            print("\t- Right arm no swing")
+            print("\n\t- Right arm no swing", end='')
         if no_swing_left / no_total_frame > 0.90:
             no_gait += 1
-            print("\t- Left arm no swing")
+            print("\n\t- Left arm no swing", end='')
         if no_gait == 0:
-            print("\t- No gait")
+            print("No gait", end='')
+        print()
         print("="*70)
         break
 
