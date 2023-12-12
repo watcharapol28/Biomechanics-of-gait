@@ -43,9 +43,9 @@ run :
 ```
 
 output :</br>
-<a>================================ Conclude ===============================</br>
-     Gait abnormal - risk : [none / neck pain / limping / hip hike / no arm swing]</br>
-======================================================================</br></a>
+<a></br>
+Conclude gait abnormal - risk : [none / neck pain / limping / hip hike / no arm swing]</br>
+</br></a>
 
 
 
