@@ -44,7 +44,7 @@ run :
 
 output :</br>
 <a>================================ Conclude ===============================</br>
- Gait abnormal - risk : [none / neck pain / limping / hip hike / no arm swing]</br>
+     Gait abnormal - risk : [none / neck pain / limping / hip hike / no arm swing]</br>
 ======================================================================</br></a>
 
 
