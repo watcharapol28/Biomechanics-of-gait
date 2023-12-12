@@ -42,8 +42,10 @@ run :
   python BiomechanicsOfGait.py
 ```
 
-output :
-<img src="conclude.jpg">
+output :</br>
+============================== Conclude ==============================</br>
+ Gait abnormal - risk : [none / neck pain / limping / hip hike / no arm swing]</br>
+======================================================================</br>
 
 
 
