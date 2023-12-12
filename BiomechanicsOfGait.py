@@ -8,7 +8,7 @@ mp_pose = mp.solutions.pose
 mp_draw = mp.solutions.drawing_utils
 
 pose = mp_pose.Pose()
-cap = cv2.VideoCapture("gait_abnormal_05.mp4")
+cap = cv2.VideoCapture("gait.mp4")
 # cap = cv2.VideoCapture("gait_normal_01.mp4")
 
 # Set the video be low frame rate
