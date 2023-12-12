@@ -37,11 +37,12 @@ run :
   python3 BiomechanicsOfGait.py
 ```
 
-()change your video file name you need to check to gait.mp4</br>
-()change code in BiomechanicOfGait.py line 11 to your videos you need to check [File name].[File type] :
+( - ) change your video file name you need to check to gait.mp4</br>
+( - ) change code in BiomechanicOfGait.py line 11 to your videos you need to check [File name].[File type] :
 ```
   cap = cv2.VideoCapture("[File name].[File type]")
 ```
+</br>
 
 
 output :</br>
