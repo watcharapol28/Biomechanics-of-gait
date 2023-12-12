@@ -42,6 +42,9 @@ run :
   python BiomechanicsOfGait.py
 ```
 
+output :
+<img src="conclude.jpg">
+
 
 
 <h2>Scope</h2>
