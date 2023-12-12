@@ -27,20 +27,22 @@ install my project :</br>
 To run the Biomechanics of gait, follow these step :</br></br>
 upload files gait videos that want to check in the folder Biomechanics-of-gait or in same the folder as BiomechanicsOfGait.py.
 </br></br>
+
 open folder :
 ```
   cd Biomechanics-of-gait
 ```
-
-change code in BiomechanicOfGait.py line 11 to your videos you need to check [File name].[File type] :
-```
-  cap = cv2.VideoCapture("[File name].[File type]")
-```
-
 run :
 ```
   python3 BiomechanicsOfGait.py
 ```
+
+()change your video file name you need to check to gait.mp4</br>
+()change code in BiomechanicOfGait.py line 11 to your videos you need to check [File name].[File type] :
+```
+  cap = cv2.VideoCapture("[File name].[File type]")
+```
+
 
 output :</br>
 Conclude gait abnormal - risk : [none / neck pain / limping / hip hike / no arm swing]</br>
