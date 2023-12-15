@@ -8,13 +8,7 @@ mp_pose = mp.solutions.pose
 mp_draw = mp.solutions.drawing_utils
 
 pose = mp_pose.Pose()
-cap = cv2.VideoCapture("gait_abnormal_10.mp4")
-# cap = cv2.VideoCapture("gait_normal_01.mp4")
-
-# Set the video be low frame rate
-fourcc = cv2.VideoWriter_fourcc(*'XVID')
-fps = 45
-video_writer = cv2.VideoWriter('low_frame_rate_video.mp4', fourcc, fps, (1600, 900))
+cap = cv2.VideoCapture("./Dataset/gait_abnormal_10_neckpain.mp4")
 
 # mediapipe connect point
 rl1, rl2, rl3 = 24, 26, 28
@@ -348,7 +342,6 @@ while True:
         break
 
 cap.release()
-video_writer.release()
 cv2.destroyAllWindows()
 
 
