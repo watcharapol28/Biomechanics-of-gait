@@ -33,7 +33,6 @@ right_arm_y = []
 left_arm_x = []
 left_arm_y = []
 
-
 check_lead_foot = 0 #boolean
 no_total_frame = 0
 no_neck_frame = 0
@@ -46,12 +45,6 @@ no_swing_left = 0
 lead_foot_right = 0
 lead_foot_left = 0
 
-initial_right_swing_frame = []
-initial_left_swing_frame = []
-
-no_total_cycle = 0
-phase_of_right = ""
-phase_of_left = ""
 
 while True:
     try:
@@ -203,13 +196,16 @@ while True:
             cv2.circle(img, (lsx3, lsy3), 15, (0, 255, 0), 2)
             cv2.putText(img, str(int(left_shoulder_angle)), (lsx2 - 50, lsy2 + 50),
                         cv2.FONT_HERSHEY_PLAIN, 2, (0, 255, 0), 2)
-            
-            #angle of shoulder
-            cv2.putText(img, "angle right shoulder : " + str(int(right_shoulder_angle)), (50, 125),
-                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 2)
-            cv2.putText(img, "angle left shoulder : " + str(int(left_shoulder_angle)), (50, 150),
-                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 2)
-
+        
+            #Showing angle of shoulder
+            # cv2.putText(img, "angle right shoulder : " + str(int(right_shoulder_angle)), (50, 125),
+            #                 cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 5)
+            # cv2.putText(img, "angle right shoulder : " + str(int(right_shoulder_angle)), (50, 125),
+            #                 cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 2)
+            # cv2.putText(img, "angle left shoulder : " + str(int(left_shoulder_angle)), (50, 150),
+            #                 cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 5)
+            # cv2.putText(img, "angle left shoulder : " + str(int(left_shoulder_angle)), (50, 150),
+            #                 cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 2)
 
             ############################################################################### Circumduction ################################################################################## 
             #data for check Circumduction (some leg always swing phase)
@@ -219,10 +215,12 @@ while True:
                 no_leftleg_frame += 1
             # Circumduction 99% of one leg always swing phase
             if no_rightleg_frame / no_total_frame > 0.99 or no_leftleg_frame / no_total_frame > 0.99:
-                cv2.putText(img, "Gait abnormal - risk : Circumduction", (50, 450),
-                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
+                cv2.putText(img, "Gait abnormal - risk : Circumduction", (50, 100),
+                            cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 5)
+                cv2.putText(img, "Gait abnormal - risk : Circumduction", (50, 100),
+                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 255), 2)
             
-            ############################################################################# Neck pain ###################################################################################
+            ############################################################################# Slouch posture ###################################################################################
             # display angle of neck / bent
             left_ear_x, left_ear_y = new_lmList[left_ear][1:]
             left_shoulder_x, left_shoulder_y = new_lmList[left_shoulder][1:]
@@ -247,8 +245,10 @@ while True:
                 no_neck_frame += 1
 
             if no_neck_frame / no_total_frame > 0.6 :
-                cv2.putText(img, "Gait abnormal - risk : Neck pain", (50, 400),
-                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
+                cv2.putText(img, "Gait abnormal - risk : Slouch posture", (50, 125),
+                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 5)
+                cv2.putText(img, "Gait abnormal - risk : Slouch posture", (50, 125),
+                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 255), 2)
             
             ############################################################################# Gait limping ################################################################################
             # Gait limping read toe and heel point
@@ -282,14 +282,17 @@ while True:
                     no_limping_right += 1
 
             if no_limping_right / no_total_frame > 0.75 or no_limping_left / no_total_frame > 0.75:
-                cv2.putText(img, "Gait abnormal - risk : Limping", (50, 425),
-                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
+                cv2.putText(img, "Gait abnormal - risk : Limping", (50, 150),
+                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 5)
+                cv2.putText(img, "Gait abnormal - risk : Limping", (50, 150),
+                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 255), 2)
+            #Showing Lead of feet
             if check_lead_foot:
                 cv2.putText(img, "Lead foot : left", (50, 350),
-                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
+                            cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 2)
             else:
                 cv2.putText(img, "Lead foot : right", (50, 350),
-                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
+                            cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 255), 2)
             
             ############################################################################# No arm swing ################################################################################
             if left_shoulder_angle <= 15 and left_shoulder_angle >= -15: 
@@ -298,17 +301,19 @@ while True:
                 no_swing_right += 1
             
             if no_swing_right / no_total_frame > 0.90:
-                cv2.putText(img, "Gait abnormal - risk : Left arm no swing", (50, 475),
-                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
+                cv2.putText(img, "Gait abnormal - risk : Left arm no swing", (50, 175),
+                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 5)
+                cv2.putText(img, "Gait abnormal - risk : Left arm no swing", (50, 175),
+                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 255), 2)
             if no_swing_left / no_total_frame > 0.90:
-                cv2.putText(img, "Gait abnormal - risk : Right arm no swing", (50, 500),
-                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
+                cv2.putText(img, "Gait abnormal - risk : Right arm no swing", (50, 200),
+                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 5)
+                cv2.putText(img, "Gait abnormal - risk : Right arm no swing", (50, 200),
+                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 255), 2)
                 
-            print("="*20,"\nTOTAL CYCLE : ", no_total_cycle)
-            print(initial_right_swing_frame)
-            print(initial_left_swing_frame)
+            print("="*20)
             # Check Neck, Circumduction(R L legs), Limping(R L feet), No arm swing(R L shoulder)
-            print("Neck pain : %.3f "%float(no_neck_frame / no_total_frame), "\nStraight \t Right leg : %.3f "%float(no_rightleg_frame / no_total_frame), "\tLeft leg : %.3f "%float(no_leftleg_frame / no_total_frame), "\nLimping \t right leg : %.3f "%float(no_limping_right / no_total_frame), "\t left leg : %.3f "%float(no_limping_left / no_total_frame), "\nNo swing \t Right arm : %.3f "%float(no_swing_right / no_total_frame), "\t Left arm : %.3f"%float(no_swing_left / no_total_frame))
+            print("Slouch posture : %.3f "%float(no_neck_frame / no_total_frame), "\nStraight \t Right leg : %.3f "%float(no_rightleg_frame / no_total_frame), "\tLeft leg : %.3f "%float(no_leftleg_frame / no_total_frame), "\nLimping \t right leg : %.3f "%float(no_limping_right / no_total_frame), "\t left leg : %.3f "%float(no_limping_left / no_total_frame), "\nNo swing \t Right arm : %.3f "%float(no_swing_right / no_total_frame), "\t Left arm : %.3f"%float(no_swing_left / no_total_frame))
             print("="*20)
 
         cv2.imshow("Extracted Pose", opImg)
@@ -325,7 +330,7 @@ while True:
             print("\n\t- Limping", end='')
         if no_neck_frame / no_total_frame > 0.60 :
             no_gait += 1
-            print("\n\t- Neck pain", end='')
+            print("\n\t- Slouch posture", end='')
         if no_rightleg_frame / no_total_frame > 0.99 or no_leftleg_frame / no_total_frame > 0.99:
             no_gait += 1
             print("\n\t- Circumduction", end='')
