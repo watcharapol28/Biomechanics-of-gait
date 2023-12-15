@@ -217,15 +217,15 @@ while True:
                             cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 2)
 
 
-            ############################################################################### Hip hike ################################################################################## 
-            #data for check Hip hike (some leg always swing phase)
+            ############################################################################### Circumduction ################################################################################## 
+            #data for check Circumduction (some leg always swing phase)
             if 200 > right_angle > 160 :
                 no_rightleg_frame += 1
             if 200 > left_angle > 160 :
                 no_leftleg_frame += 1
-            # Hip hike 99% of one leg always swing phase
+            # Circumduction 99% of one leg always swing phase
             if no_rightleg_frame / no_total_frame > 0.99 or no_leftleg_frame / no_total_frame > 0.99:
-                cv2.putText(img, "Gait abnormal - risk : Hip hike", (50, 450),
+                cv2.putText(img, "Gait abnormal - risk : Circumduction", (50, 450),
                             cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
             
             ############################################################################# Neck pain ###################################################################################
@@ -313,7 +313,7 @@ while True:
             print("="*20,"\nTOTAL CYCLE : ", no_total_cycle)
             print(initial_right_swing_frame)
             print(initial_left_swing_frame)
-            # Check Neck, Hip hike(R L legs), Limping(R L feet), No arm swing(R L shoulder)
+            # Check Neck, Circumduction(R L legs), Limping(R L feet), No arm swing(R L shoulder)
             print("Neck pain : %.3f "%float(no_neck_frame / no_total_frame), "\nStraight \t Right leg : %.3f "%float(no_rightleg_frame / no_total_frame), "\tLeft leg : %.3f "%float(no_leftleg_frame / no_total_frame), "\nLimping \t right leg : %.3f "%float(no_limping_right / no_total_frame), "\t left leg : %.3f "%float(no_limping_left / no_total_frame), "\nNo swing \t Right arm : %.3f "%float(no_swing_right / no_total_frame), "\t Left arm : %.3f"%float(no_swing_left / no_total_frame))
             print("="*20)
 
@@ -334,7 +334,7 @@ while True:
             print("\n\t- Neck pain", end='')
         if no_rightleg_frame / no_total_frame > 0.99 or no_leftleg_frame / no_total_frame > 0.99:
             no_gait += 1
-            print("\n\t- Hip hike", end='')
+            print("\n\t- Circumduction", end='')
         if no_swing_right / no_total_frame > 0.90:
             no_gait += 1
             print("\n\t- Right arm no swing", end='')
