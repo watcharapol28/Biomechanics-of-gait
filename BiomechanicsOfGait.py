@@ -8,7 +8,7 @@ mp_pose = mp.solutions.pose
 mp_draw = mp.solutions.drawing_utils
 
 pose = mp_pose.Pose()
-cap = cv2.VideoCapture("./Dataset/gait_abnormal_10_neckpain.mp4")
+cap = cv2.VideoCapture("./Dataset/gait.mp4")
 
 # mediapipe connect point
 rl1, rl2, rl3 = 24, 26, 28
