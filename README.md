@@ -9,7 +9,7 @@ This project aims to investigate the possibility of abnormal gait in order to id
 (-) Using OpenCV to read data from image or video.</br>
 (-) Using Numpy for calculate math equations to determine risk of gait.</br></br>
 
-<img src = "Limping gait.gif" />
+<img src = "./Other/(GIF)Limping gait.gif" />
 </br></br>
 
 ## Installation
