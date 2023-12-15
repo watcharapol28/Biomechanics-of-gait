@@ -37,11 +37,11 @@ open folder :
   cd Biomechanics-of-gait
 ```
 2 choice with your videos you need to check</br>
-( - ) change your video file name you need to check to gait.mp4</br>
+( - ) change your video file name you need to check to gait.mp4 in folder Dataset</br>
 ( - ) change code in BiomechanicOfGait.py line 11 to your videos you need to check [File name].[File type] :
 
 ```
-  cap = cv2.VideoCapture("[File name].[File type]")
+  cap = cv2.VideoCapture("./Dataset/[File name].[File type]")
 ```
 
 run :
