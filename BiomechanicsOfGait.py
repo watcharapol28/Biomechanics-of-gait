@@ -387,7 +387,7 @@ while True:
             no_gait += 1
             print("\n\t- Left arm no swing", end='')
         if no_gait == 0:
-            print("No gait", end='')
+            print("No risk", end='')
         print()
         print("="*70)
         break
