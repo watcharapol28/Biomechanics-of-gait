@@ -8,7 +8,7 @@ mp_pose = mp.solutions.pose
 mp_draw = mp.solutions.drawing_utils
 
 pose = mp_pose.Pose()
-cap = cv2.VideoCapture("gait.mp4")
+cap = cv2.VideoCapture("gait_abnormal_06.mp4")
 # cap = cv2.VideoCapture("gait_normal_01.mp4")
 
 # Set the video be low frame rate
@@ -309,51 +309,6 @@ while True:
             if no_swing_left / no_total_frame > 0.90:
                 cv2.putText(img, "Gait abnormal - risk : Right arm no swing", (50, 500),
                             cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
-                
-            # # Gait limping read hand points and using feet points
-            # right_hand_index_x, right_hand_index_y = new_lmList[16][1:]
-            # left_hand_index_x, left_hand_index_y = new_lmList[15][1:]
-            # right_arm_x.append(right_hand_index_x)
-            # right_arm_y.append(right_hand_index_y)
-            # left_arm_x.append(left_hand_index_x)
-            # left_arm_y.append(left_hand_index_y)
-
-            # if left_toe_index_x > left_heel_index_x:
-            #     if check_lead_foot :
-            #         lead_foot_left += 1
-            #         if left_toe_index_x > right_hand_index_x and right_heel_index_x < right_hand_index_x:
-            #             no_swing_right +=1
-            #         if left_toe_index_x > left_hand_index_x and right_heel_index_x < left_hand_index_x:
-            #             no_swing_left +=1
-            #     else:
-            #         lead_foot_right += 1
-            #         if right_toe_index_x > right_hand_index_x and left_heel_index_x < right_hand_index_x:
-            #             no_swing_right +=1
-            #         if left_toe_index_x > left_hand_index_x and right_heel_index_x < left_hand_index_x:
-            #             no_swing_left +=1
-            # else:
-            #     if check_lead_foot :
-            #         lead_foot_left += 1
-            #         if left_toe_index_x < right_hand_index_x and right_heel_index_x > right_hand_index_x:
-            #             no_swing_right +=1
-            #         if left_toe_index_x < left_hand_index_x and right_heel_index_x > left_hand_index_x:
-            #             no_swing_left +=1
-            #     else:
-            #         lead_foot_right += 1
-            #         if right_toe_index_x < right_hand_index_x and left_heel_index_x > right_hand_index_x:
-            #             no_swing_right +=1
-            #         if left_toe_index_x < left_hand_index_x and right_heel_index_x > left_hand_index_x:
-            #             no_swing_left +=1
-            
-            # if (no_swing_right / no_total_frame > 0.95 ) or (no_swing_left / no_total_frame > 0.95 ):
-            #     cv2.putText(img, "Gait abnormal - risk : No arm swing", (50, 475),
-            #                 cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
-        
-            
-            cv2.putText(img, "phase of right side : " + phase_of_right, (50, 75),
-                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 2)
-            cv2.putText(img, "phase of left side : " + phase_of_left, (50, 100),
-                            cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 0), 2)
                 
             print("="*20,"\nTOTAL CYCLE : ", no_total_cycle)
             print(initial_right_swing_frame)
