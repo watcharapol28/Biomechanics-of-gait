@@ -8,7 +8,7 @@ mp_pose = mp.solutions.pose
 mp_draw = mp.solutions.drawing_utils
 
 pose = mp_pose.Pose()
-cap = cv2.VideoCapture("gait_abnormal_06.mp4")
+cap = cv2.VideoCapture("gait_abnormal_10.mp4")
 # cap = cv2.VideoCapture("gait_normal_01.mp4")
 
 # Set the video be low frame rate
@@ -287,7 +287,7 @@ while True:
                     check_lead_foot = 0 #Right foot is lead
                     no_limping_right += 1
 
-            if no_limping_right / no_total_frame > 0.80 or no_limping_left / no_total_frame > 0.80:
+            if no_limping_right / no_total_frame > 0.75 or no_limping_left / no_total_frame > 0.75:
                 cv2.putText(img, "Gait abnormal - risk : Limping", (50, 425),
                             cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 256), 2)
             if check_lead_foot:
@@ -326,7 +326,7 @@ while True:
     except:
         no_gait = 0
         print("="*30," Conclude ", "="*30, "\n Gait abnormal - risk : ", sep='', end='')
-        if no_limping_right / no_total_frame > 0.80 or no_limping_left / no_total_frame > 0.80:
+        if no_limping_right / no_total_frame > 0.75 or no_limping_left / no_total_frame > 0.75:
             no_gait += 1
             print("\n\t- Limping", end='')
         if no_neck_frame / no_total_frame > 0.60 :
